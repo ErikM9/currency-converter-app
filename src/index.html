@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="currency-bg" class="currency-symbols">
+        <div class="symbol dollar dollar1">$</div>
+        <div class="symbol dollar dollar2">$</div>
+        <div class="symbol euro euro1">€</div>
+        <div class="symbol euro euro2">€</div>
+        <div class="symbol pound pound1">£</div>
+        <div class="symbol pound pound2">£</div>
+        <div class="symbol yen yen1">¥</div>
+        <div class="symbol yen yen2">¥</div>
+        <div class="symbol rupee rupee1">₹</div>
+        <div class="symbol rupee rupee2">₹</div>
+        <div class="symbol yuan yuan1">¥</div>
+        <div class="symbol yuan yuan2">¥</div>
+    </div>
+
+    <div class="converter-container">
+        <h1>Currency Converter</h1>
+        <h2>Choose the amount and the currencies. You can click on the little arrow between the two currencies to swap them.</h2>
+        <div class="converter-form">
+            <div class="amount-section">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" value="1">
+            </div>
+            <div class="currency-section">
+                <div class="currency-row">
+                    <div class="custom-select-wrapper">
+                        <label for="from-currency-btn">From:</label>
+                        <div class="custom-select" id="from-currency-custom">
+                            <div class="selected-option" id="from-currency-btn" role="combobox" tabindex="0" aria-label="From currency" aria-haspopup="listbox" aria-expanded="false">USD</div>
+                            <ul class="options-list" role="listbox" aria-label="From currency options"></ul>
+                        </div>
+                    </div>
+
+                    <button id="swap-btn" aria-label="Swap currencies">↔</button>
+
+                    <div class="custom-select-wrapper">
+                        <label for="to-currency-btn">To:</label>
+                        <div class="custom-select" id="to-currency-custom">
+                            <div class="selected-option" id="to-currency-btn" role="combobox" tabindex="0" aria-label="To currency" aria-haspopup="listbox" aria-expanded="false">EUR</div>
+                            <ul class="options-list" role="listbox" aria-label="To currency options"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result" aria-live="polite"></div>
+        <div id="loading" class="loading" style="display: none;">Loading...</div>
+    </div>
+
+    <script type="module" src="scripts.js"></script>
+</body>
+</html>
